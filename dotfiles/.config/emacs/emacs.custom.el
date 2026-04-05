@@ -13,16 +13,7 @@
      "986965808b5e398dcbdcdbc117c61d96fd14d6f903ea8d91403f5b98c64dc9db"
      "f9d423fcd4581f368b08c720f04d206ee80b37bfb314fa37e279f554b6f415e9"
      default))
- '(package-selected-packages
-   '(cheat-sh colorful-mode company diff-hl doom-modeline doom-themes
-              elcord evil-collection evil-commentary evil-goggles
-              evil-terminal-cursor-changer evil-textobj-tree-sitter
-              flycheck format-all general golden-ratio good-scroll
-              helpful ligature lsp-java lsp-ui marginalia mistty
-              nerd-icons-completion nerd-icons-dired
-              nerd-icons-ibuffer org-auto-tangle org-superstar
-              pdf-tools tab-jump-out toc-org undo-fu-session vertico
-              ws-butler xclip yasnippet zig-mode))
+ '(package-selected-packages nil)
  '(package-vc-selected-packages '((grease :url "https://github.com/mwac-dev/grease.el"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -1,4 +1,5 @@
-local servers = { "lua_ls", "clangd", "cmake", "bashls", "pyright", "tinymist", "java-language-server", "jdtls", "zls" }
+local servers = { "lua_ls", "clangd", "cmake", "bashls", "pyright", "tinymist", "java-language-server", "jdtls", "zls",
+   "gopls" }
 
 vim.lsp.enable(servers)
 
@@ -8,10 +9,11 @@ vim.diagnostic.config({
 })
 
 vim.lsp.config("bashls", {
-   filetypes = { "bash", "zsh" },
+   filetypes = { "bash", "zsh", "sh", "command", "inc" },
 })
+
 vim.lsp.config("clangd", {
-   cmd = { "clangd", "--header-insertion=never" },
+   cmd = { "clangd", "--header-insertion=never", "--limit-references=80", "--limit-results=30", "-j", "2" },
 })
 
 vim.api.nvim_create_autocmd("InsertEnter", {

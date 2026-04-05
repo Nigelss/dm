@@ -275,7 +275,6 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-sh-at-startup "ghostty --maximize -e tmux"
-spawn-sh-at-startup "emacs --daemon"
 spawn-at-startup "hypridle"
 spawn-at-startup "sunsetr"
 spawn-at-startup "fcitx5"
@@ -622,7 +621,7 @@ binds {
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
-    Mod+E { spawn-sh "emacsclient -c"; }
+    // Mod+E { spawn-sh "emacsclient -c"; }
     Mod+N { spawn "nemo"; }
     Ctrl+Alt+Delete { quit; }
 

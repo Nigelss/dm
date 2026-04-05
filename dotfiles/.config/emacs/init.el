@@ -517,9 +517,9 @@
     (etcc-on))
   )
 
-(use-package elcord
-  :init
-  (elcord-mode))
+;; (use-package elcord
+;;   :init
+;;   (elcord-mode))
 
 (use-package mistty
   :bind (("M-e" . mistty) ("C-l" . mistty-clear)))

@@ -5,5 +5,15 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "L3MON4D3/LuaSnip",
    },
-   opts = {},
+   opts = {
+      tabouts = {
+         { open = "'", close = "'" },
+         { open = '"', close = '"' },
+         { open = '`', close = '`' },
+         { open = '(', close = ')' },
+         { open = '[', close = ']' },
+         { open = '{', close = '}' },
+         { open = '<', close = '>' }
+      },
+   },
 }

@@ -57,6 +57,8 @@ vim.opt.autoread = true
 vim.opt.autowrite = false
 vim.opt.virtualedit = "block"
 vim.opt.confirm = true
+vim.opt.maxsearchcount = 9999
+vim.opt.maxmempattern = 4000
 
 local undo_dir = vim.fn.expand("~/.local/share/nvim/undo/")
 

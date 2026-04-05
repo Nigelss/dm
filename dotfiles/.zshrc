@@ -72,20 +72,25 @@ alias gaa='git add -A'
 alias empty='git commit --allow-empty-message -m "" '
 alias switch='git switch'
 alias branch='git branch'
+alias worktree='git worktree' 
+alias rebase='git rebase'
 alias repo-gen='gh repo create --source=. --private --remote origin'
 alias ff='yazi'
 alias c='clear'
 alias py='python'
-alias vi="TERM=tmux-direct emacsclient -t -a ''"
+# alias vi="TERM=tmux-direct emacsclient -t -a ''"
+alias vi="nvim"
 alias log='git log --oneline --graph --decorate'
+alias gdb='gdb -q'
 
 alias battery='cat /sys/class/power_supply/BAT0/capacity'
 # PS1='[\u@\h \W]\$ '
 
 export MANPAGER="nvim +Man!"
 export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH
-export EDITOR="emacsclient -t -a ''"
-export VISUAL="emacsclient -c -a emacs"
+export EDITOR="nvim"
+export FZF_DEFAULT_OPTS="--bind=alt-n:down,alt-p:up"
+# export VISUAL="emacsclient -c -a emacs"
 
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"

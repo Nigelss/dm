@@ -81,5 +81,12 @@ return {
          end,
          desc = "find git branches",
       },
+      {
+         "<leader>fm",
+         function()
+            require("fzf-lua").manpages({})
+         end,
+         desc = "find git branches",
+      },
    },
 }
