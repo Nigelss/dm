@@ -51,4 +51,4 @@ require("lazy").setup({
    },
 })
 
-require("config.colorscheme").set_hl()
+require("config.colorscheme").retro()

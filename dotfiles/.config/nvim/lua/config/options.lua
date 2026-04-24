@@ -5,9 +5,9 @@ vim.o.scrolloff = 12
 vim.o.sidescroll = 10
 
 -- indentation
-vim.o.tabstop = 3
-vim.o.softtabstop = 3
-vim.o.shiftwidth = 3
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
 vim.o.smartindent = true
 vim.o.autoindent = true
 vim.o.expandtab = true
@@ -27,7 +27,7 @@ vim.o.wrap = false
 vim.o.cmdheight = 1
 vim.opt.showmode = false
 vim.o.autochdir = false
-vim.opt.shortmess:append("I")
+-- vim.opt.shortmess:append("I")
 vim.o.mouse = "a"
 vim.o.hidden = true
 vim.o.errorbells = false
@@ -65,5 +65,5 @@ local undo_dir = vim.fn.expand("~/.local/share/nvim/undo/")
 vim.opt.undodir = undo_dir
 
 if vim.fn.isdirectory(undo_dir) == false then
-   vim.fn.mkdir(undo_dir, "p")
+        vim.fn.mkdir(undo_dir, "p")
 end
