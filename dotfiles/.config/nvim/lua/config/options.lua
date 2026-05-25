@@ -65,5 +65,5 @@ local undo_dir = vim.fn.expand("~/.local/share/nvim/undo/")
 vim.opt.undodir = undo_dir
 
 if vim.fn.isdirectory(undo_dir) == false then
-        vim.fn.mkdir(undo_dir, "p")
+    vim.fn.mkdir(undo_dir, "p")
 end

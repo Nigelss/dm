@@ -51,15 +51,15 @@ vim.keymap.set({ "n", "v" }, "<M-w>", "<C-w>", { desc = "faster shortcut for swi
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Open parent directory" })
 
 vim.keymap.set({ "i", "v", "n" }, "<Esc>", function()
-   vim.cmd("nohlsearch")
-   return vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
+    vim.cmd("nohlsearch")
+    return vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
 end, { expr = true, noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>ap", ":e ~/.config/nvim/lua/plugins/", { desc = "add-plugins" })
 
 vim.keymap.set("n", "<leader>zi", function()
-   vim.api.nvim_command("VietnameseToggle")
-   vim.cmd("startinsert")
+    vim.api.nvim_command("VietnameseToggle")
+    vim.cmd("startinsert")
 end, { silent = true })
 
 -- vim.keymap.set("n", "<leader>tt", ":ToggleTerm direction=horizontal size=11<cr>", { desc = "open terminal" })

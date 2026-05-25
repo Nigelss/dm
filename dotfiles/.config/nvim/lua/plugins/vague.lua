@@ -1,3 +1,3 @@
 return {
-   "vague-theme/vague.nvim"
+    "vague-theme/vague.nvim"
 }

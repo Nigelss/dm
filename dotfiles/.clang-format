@@ -3,7 +3,7 @@ IndentWidth: 4
 ColumnLimit: 88
 
 Cpp11BracedListStyle: false
-SpaceBeforeCpp11BracedList: true
+SpaceBeforeCpp11BracedList: false
 
 BreakConstructorInitializers: BeforeComma
 BreakInheritanceList: BeforeComma
