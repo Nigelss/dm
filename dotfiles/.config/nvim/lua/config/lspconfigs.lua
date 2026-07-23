@@ -1,5 +1,5 @@
 local servers = { "lua_ls", "clangd", "cmake", "bashls", "pyright", "tinymist", "java-language-server", "jdtls", "zls",
-    "gopls" }
+    "gopls", "neocmake" }
 
 vim.lsp.enable(servers)
 
@@ -14,6 +14,19 @@ vim.lsp.config("bashls", {
 
 vim.lsp.config("clangd", {
     cmd = { "clangd", "--header-insertion=never", "--limit-references=80", "--limit-results=30", "-j", "2" },
+})
+
+vim.lsp.config("neocmake", {
+    init_options = {
+        format = {
+            enable = false,
+        },
+        lint = {
+            enable = true
+        },
+        scan_cmake_in_package = false,
+        semantic_token = false,
+    }
 })
 
 vim.api.nvim_create_autocmd("InsertEnter", {

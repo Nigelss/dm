@@ -3,7 +3,7 @@ return {
     branch = "latest",
     dependencies = {
         "nvim-lua/plenary.nvim",
-        { "m00qek/baleia.nvim" },
+        -- { "m00qek/baleia.nvim" },
     },
     config = function()
         ---@type CompileModeOpts
@@ -13,7 +13,7 @@ return {
             input_word_completion = true,
 
             -- to add ANSI escape code support, add:
-            baleia_setup = true,
+            -- baleia_setup = true,
 
             -- to make `:Compile` replace special characters (e.g. `%`) in
             -- the command (and behave more like `:!`), add:
@@ -30,7 +30,7 @@ return {
                 go = "go run .",
             },
             focus_compilation_buffer = true,
-            use_pseudo_terminal = true
+            -- use_pseudo_terminal = false,
         }
     end
 }
