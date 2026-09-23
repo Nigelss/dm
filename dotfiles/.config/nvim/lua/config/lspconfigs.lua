@@ -11,6 +11,7 @@ local servers = {
 	"gopls",
 	"neocmake",
 	"roslyn_ls",
+	"glsl_analyzer",
 }
 
 vim.lsp.enable(servers)
@@ -37,7 +38,7 @@ vim.lsp.config("neocmake", {
 			enable = true,
 		},
 		scan_cmake_in_package = false,
-		semantic_token = false,
+		semantic_token = true,
 	},
 })
 
@@ -53,8 +54,6 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 	end,
 })
 
-vim.keymap.set("n", "gd", function()
-	vim.lsp.buf.definition()
-end, { desc = "show definitions" })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "show definitions" })
 
 vim.lsp.handlers["$/progress"] = function() end

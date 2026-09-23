@@ -45,23 +45,26 @@ vim.keymap.set("n", "<M-i>", "<C-i>zz")
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
-vim.keymap.set({ "n", "v", 'i' }, "<M-x>", ":", { desc = "faster shortcut for command mode" })
+vim.keymap.set({ "n", "v", "i" }, "<M-x>", ":", { desc = "faster shortcut for command mode" })
 vim.keymap.set({ "n", "v" }, "<M-w>", "<C-w>", { desc = "faster shortcut for switching windows" })
 -- vim.keymap.set({ "n", "v" }, "<M-W>", "?", { desc = "faster shortcut for reverse searching" })
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Open parent directory" })
 
 vim.keymap.set({ "i", "v", "n" }, "<Esc>", function()
-    vim.cmd("nohlsearch")
-    return vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
+	vim.cmd("nohlsearch")
+	return vim.api.nvim_replace_termcodes("<Esc>", true, false, true)
 end, { expr = true, noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>ap", ":e ~/.config/nvim/lua/plugins/", { desc = "add-plugins" })
 
 vim.keymap.set("n", "<leader>zi", function()
-    vim.api.nvim_command("VietnameseToggle")
-    vim.cmd("startinsert")
+	vim.api.nvim_command("VietnameseToggle")
+	vim.cmd("startinsert")
 end, { silent = true })
 
--- vim.keymap.set("n", "<leader>tt", ":ToggleTerm direction=horizontal size=11<cr>", { desc = "open terminal" })
--- vim.keymap.set("n", "<leader>tf", ":ToggleTerm direction=float<cr>", { desc = "floating terminal" })
--- vim.keymap.set("n", "<leader>tv", ":ToggleTerm direction=vertical size=60<cr>", { desc = "vertical split terminal" })
+vim.keymap.set(
+	"n",
+	"<leader>ep",
+	":Oil " .. vim.fn.expand(vim.fn.stdpath("config")) .. "/lua/plugins<CR>",
+	{ desc = "edit plugins" }
+)

@@ -64,6 +64,17 @@ local undo_dir = vim.fn.expand("~/.local/share/nvim/undo/")
 
 vim.opt.undodir = undo_dir
 
+-- vim.opt.foldmethod = "manual"
+-- -- vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+--
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
+vim.opt.foldtext = ""
+vim.opt.foldopen = "block"
+
 if vim.fn.isdirectory(undo_dir) == false then
 	vim.fn.mkdir(undo_dir, "p")
 end

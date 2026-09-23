@@ -13,10 +13,6 @@
 -- local rep = require("luasnip.extras").rep
 
 return {
-	-- s({
-	-- 	trig = "pp",
-	-- 	snippetType = "autosnippet",
-	-- }, fmta("std::cout<< <> ;", i(1, "args"))),
 	s(
 		{ trig = "main ", snippetType = "autosnippet" },
 		fmta(
@@ -30,9 +26,9 @@ return {
 			i(1)
 		)
 	),
-	-- s({ trig = "pp", snippetType = "autosnippet" }, fmta("std::cout<<<< <>  ;", i(1, "args"))),
-	-- s({ trig = "pn", snippetType = "autosnippet" }, fmta("std::cout<<<< <> <<<< '\\n' ;", i(1, "args"))),
-	s({ trig = "ndc ", snippetType = "autosnippet" }, t("[[nodiscard]]")),
+	s({ trig = "nodi ", snippetType = "autosnippet" }, t("[[nodiscard]] ")),
+	s({ trig = "nodic ", snippetType = "autosnippet" }, t("[[nodiscard]] constexpr ")),
+	s({ trig = "cexpr ", snippetType = "autosnippet" }, t("constexpr ")),
 	s(
 		{ trig = "clas ", snippetType = "autosnippet" },
 		fmta(

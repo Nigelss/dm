@@ -113,3 +113,8 @@ bindkey '^[r' fzf-and-run-widget
 # complete -cf sudo
 # complete -cf man
 rfkill unblock all
+# Add environment variable AX_ROOT for axmol
+export AX_ROOT="/home/nigel/Projects/axmol/axmol-engine/axmol"
+# Add axmol cmdline tool to PATH
+export PATH=$AX_ROOT/tools/cmdline:$PATH
+
